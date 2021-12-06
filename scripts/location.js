@@ -10,3 +10,9 @@ function getCityGU() {
         }
     }).open();
 }
+
+function gotomain() {
+    var location = document.getElementById("location-text").value;
+    console.log(location);
+    window.location.href = "index.html?location?" + location;
+}
