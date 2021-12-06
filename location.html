@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <script src='scripts/sidebar.js'></script>
+</head>
+
+
+<body style="width:428px; margin: 0 auto;">
+
+    <div id="left-sidebar" class="left_sidebar">
+        <img class="close_btn" src="assets/cancel.png" onclick="close_sidebar()">
+
+        <div style="margin: 200px 0 0 0;">
+            <div id="home" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/home.png">
+                <span class="sidebar_icon_text">HOME</span>
+            </div>
+            <div class="sidebar_divider"></div>
+            <div id="set-location" class="sidebar_menu" onclick="location.href='location.html'">
+                <img class="sidebar_icon" src="assets/location.png">
+                <span class="sidebar_icon_text">위치 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/notification.png">
+                <span class="sidebar_icon_text">알림 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/conversation.png">
+                <span class="sidebar_icon_text">문의하기</span>
+            </div>
+            <div class="sidebar_divider"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-div">
+            <div id="hamburger" class='hamburger' onclick="toggle()">
+                <img class='img-icon' src='assets/hamburger.png'>
+            </div>
+
+            <span class="main-text">위치 설정하기</span>
+
+            <div style="width:100%">
+                <span class="head-text">현재 설정 위치</span>
+
+                <div class="location-div">
+                    <span class="location-text">서울시 성북구</span>
+                </div>
+            </div>
+
+            <div style="width: 100%;">
+                <div class="location-option1" onclick="location.href='location-self.html'">
+                    <div class="container">
+                        <span class="location-option-text"><p>직접 입력</p></span>
+                    </div>
+                </div>
+
+
+                <div class="location-option2" onclick="location.href='location-map.html'">
+                    <div class="container">
+                        <span class="location-option-text"><p>지도 선택</p></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>

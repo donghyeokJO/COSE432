@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <script src='scripts/sidebar.js'></script>
+    <script src='scripts/location.js'></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <script>
+        function sample5_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    var addr = data.address; // 최종 주소 변수
+
+                    // 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById("location-text").value = addr;
+                    // 주소로 상세 정보를 검색
+                }
+            }).open();
+        }
+    </script>
+</head>
+
+<body style="width:428px; margin: 0 auto;">
+
+    <div id="left-sidebar" class="left_sidebar">
+        <img class="close_btn" src="assets/cancel.png" onclick="close_sidebar()">
+
+        <div style="margin: 200px 0 0 0;">
+            <div id="home" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/home.png">
+                <span class="sidebar_icon_text">HOME</span>
+            </div>
+            <div class="sidebar_divider"></div>
+            <div id="set-location" class="sidebar_menu" onclick="location.href='location.html'">
+                <img class="sidebar_icon" src="assets/location.png">
+                <span class="sidebar_icon_text">위치 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/notification.png">
+                <span class="sidebar_icon_text">알림 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/conversation.png">
+                <span class="sidebar_icon_text">문의하기</span>
+            </div>
+            <div class="sidebar_divider"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-div">
+            <div id="hamburger" class='hamburger' onclick="toggle()">
+                <img class='img-icon' src='assets/hamburger.png'>
+            </div>
+
+
+            <span class="main-text">위치 설정하기</span>
+
+
+            <div style="width:100%; height: 40px ">
+                <span class="location-self-current-location-head-text">현재 위치</span>
+
+                <div class="location-self-current-location">
+                    <span class="location-text">서울시 성북구</span>
+                </div>
+            </div>
+
+            <div class="unvisible-divider"></div>
+
+            <div style="width:100%; height: 40px">
+                <span class="location-self-current-location-head-text">직접 입력</span>
+
+                <input id="location-text" type="text" class="location-self-current-location">
+                <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

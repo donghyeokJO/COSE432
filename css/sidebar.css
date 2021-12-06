@@ -1,0 +1,70 @@
+.left_sidebar {
+    width: 235px;
+    height: 926px;
+    margin: 0 194px 0 0;
+    padding: 9px 0 2px 8px;
+    border: solid 1px #707070;
+    background-color: rgba(66, 103, 178, 0.87);
+    position: fixed;
+    z-index: 1001;
+    visibility: hidden;
+}
+
+.close_btn {
+    width: 44px;
+    height: 44px;
+    margin: 0 8px 22px 180px;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.sidebar_menu {
+    width: 200px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.sidebar_icon {
+    width: 35px;
+    height: 35px;
+    margin: 5px 1px 10.5px 22px;
+    float: left;
+}
+
+.sidebar_icon_text {
+    width: 100px;
+    height: 55px;
+    margin: 0px 10px 5px 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+    float: left;
+}
+
+.sidebar_divider {
+    width: 168px;
+    height: 1px;
+    margin: 0px 33px 2.5px 25px;
+    background-color: #fff;
+}
+
+.system_info_text {
+    width: 86px;
+    height: 66px;
+    margin: 69px 8px 0 7px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+}

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-
 /* section 제목  */
+
 .section-header {
     width: 69px;
     height: 19px;
@@ -16,7 +16,10 @@
     text-align: left;
     color: #14171a;
 }
+
+
 /* 날짜 표시 되는 div  */
+
 .main-date {
     width: 127px;
     height: 28px;
@@ -26,7 +29,10 @@
     background-color: rgba(29, 161, 242, 0.21);
     text-align: center;
 }
+
+
 /* 날짜 텍스트 */
+
 .main-date-text {
     width: 108px;
     height: 33px;
@@ -42,9 +48,11 @@
     color: #14171a;
 }
 
+
 /* 위치 텍스트 */
+
 .location-text {
-    white-space : pre-line;
+    white-space: pre-line;
     width: 90px;
     height: 33px;
     margin: 1px 15px 0 22px;
@@ -59,7 +67,9 @@
     color: #14171a;
 }
 
+
 /* 기온 텍스트 */
+
 .temperature-text {
     width: 185px;
     height: 43px;
@@ -75,17 +85,21 @@
     color: #14171a;
 }
 
+
 /* image - section 1 */
+
 .image-section1 {
     width: 45px;
     height: 45px;
     margin: 0 18px 11px 11px;
-    white-space : pre-line;
+    white-space: pre-line;
     vertical-align: middle;
     /* display: inline-block; */
 }
 
+
 /* image-text section 1 */
+
 .img-text-section1 {
     width: 160px;
     height: 33px;
@@ -103,31 +117,40 @@
     color: #14171a;
 }
 
+
 /* section 2 */
+
 .section2 {
     width: 100%;
-    /* height: 213px; */
-    margin: 0 0 0 0;
+    height: 213px;
+    margin: 0 auto;
     padding: 8px 0 15px;
+    overflow: hidden;
 }
 
+
 /* section2 - weather */
-.section2-weather{
+
+.section2-weather {
     width: 211px;
     height: 120px;
-    margin: 0 3px 0 0;
+    margin: 0 auto;
     padding: 27px 0px 20px 0px;
     float: left;
 }
 
+
 /* section2 weather img */
+
 .main-img-section2 {
     width: 85px;
     height: 85px;
     margin: 27px 10px 0px 56px;
 }
 
+
 /* section wather text */
+
 .section2-weather-text {
     width: 185px;
     height: 43px;
@@ -143,28 +166,94 @@
     color: #14171a;
 }
 
+
 /* section2 icons */
-.section2-icons{
+
+.section2-icons {
     width: 211px;
     height: 182px;
-    margin: 0 3px 8px 4px;
-    padding: 72px 0px 10px 0px;
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
     float: left;
 }
 
+
 /* section2 - sub section */
-.section2-sub-section{
+
+.section2-sub-section {
     width: 211px;
     height: 56px;
-    margin: 6px 0 0 4px;
+    margin: 10px 0 0 4px;
     /* padding: 11px 4px 10px 55px; */
 }
 
 
-
 /* section2 - img */
+
 .section2-img {
-    width: 71px;
-    height: 71px;
-    margin: 41px 130px 0px 0px;
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px 0px 0px;
+    vertical-align: middle;
+    float: left;
+}
+
+
+/* section2-img-text */
+
+.section2-img-txt {
+    width: 155px;
+    height: 35px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+    float: left;
+    margin: 10px 0 0 0;
+}
+
+
+/* section3 - news */
+
+.section3-news {
+    width: 385px;
+    height: 30px;
+    margin: 3px 21px 15px 22px;
+    padding: 1px 0px 2px 9px;
+    border-radius: 43px;
+    border: solid 1px #707070;
+    background-color: rgba(29, 161, 242, 0.21);
+}
+
+
+/* section3 - img */
+
+.section3-img {
+    width: 27px;
+    height: 27px;
+    float: left;
+}
+
+
+/* section3 - image text */
+
+.section3-img-txt {
+    width: 310px;
+    height: 33px;
+    margin: 3px 10px 12px 19px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+    float: left;
 }
