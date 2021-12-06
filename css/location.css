@@ -118,6 +118,14 @@
     border: solid 1px #707070;
     background-color: rgba(29, 161, 242, 0.21);
     float: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
 }
 
 .unvisible-divider {
@@ -126,3 +134,75 @@
     margin: 0px 0 8px;
     background-color: #f5f8fa;
 }
+
+.save-btn {
+    width: 35%;
+    height: 38px;
+    margin: 13px 8px 14px 51px;
+    /* padding: 10px 48px 9px 52px; */
+    border-radius: 42px;
+    border: solid 1px #707070;
+    background-color: rgba(29, 161, 242, 0.21);
+    float: left;
+    display: flex;
+}
+
+.cancel-btn {
+    width: 35%;
+    height: 38px;
+    margin: 13px 51px 14px 8px;
+    /* padding: 10px 62px 9px 65px; */
+    border-radius: 42px;
+    border: solid 1px #707070;
+    background-color: rgba(214, 84, 114, 0.25);
+    float: left;
+    display: flex;
+}
+
+.btn-text {
+    width: 60px;
+    height: 19px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #14171a;
+    margin: 5px 45px 10px 45px;
+    vertical-align: middle;
+}
+
+.search-btn {
+    width: 66px;
+    height: 34px;
+    margin: 5px 0 0 0;
+    border-radius: 17px;
+    border: solid 1px #707070;
+    background-color: rgba(193, 53, 132, 0.37);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+
+/* .search-btn-text {
+    width: 35px;
+    height: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+} */
