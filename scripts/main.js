@@ -1,6 +1,6 @@
 window.onload = function() {
     var url = window.location.href;
-
+    url = decodeURI(url);
     const url_str = new URL(url);
 
     const url_params = url_str.searchParams;
