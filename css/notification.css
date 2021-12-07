@@ -1,0 +1,163 @@
+.section-header-text {
+    width: 86px;
+    height: 33px;
+    margin: 14px 0 6px 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 3px solid #707070;
+    position: relative;
+    margin-top: 5px;
+}
+
+input[class="checker"]:checked+label::after {
+    content: '✔';
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    /* margin-top: 5px; */
+    left: 0;
+    top: 0;
+}
+
+.image-section1 {
+    width: 45px;
+    height: 45px;
+    margin: 0 18px 11px 11px;
+    white-space: pre-line;
+    vertical-align: middle;
+    /* display: inline-block; */
+}
+
+.img-text-section1 {
+    width: 160px;
+    height: 33px;
+    margin: 8px 3px 0px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+    color: #14171a;
+}
+
+.image-section2 {
+    width: 49px;
+    height: 48px;
+    margin: 5px 10px 35px 4px;
+    white-space: pre-line;
+    vertical-align: middle;
+}
+
+.img-text-section2 {
+    width: 200px;
+    height: 33px;
+    margin: 8px 3px 0px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+    color: #14171a;
+}
+
+.section3-time {
+    width: 58px;
+    height: 88px;
+    margin: 25px 1px 39px 16px;
+    padding: 15px;
+    border-radius: 34px;
+    border: solid 1px #707070;
+    background-color: #e1e8ed;
+    float: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #14171a;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    margin: 40px 10px 40px 20px;
+    border: solid 1px #707070;
+    background-color: #707070;
+    display: block
+}
+
+.save-btn {
+    width: 35%;
+    height: 38px;
+    margin: 13px 8px 14px 51px;
+    /* padding: 10px 48px 9px 52px; */
+    border-radius: 42px;
+    border: solid 1px #707070;
+    background-color: rgba(29, 161, 242, 0.21);
+    float: left;
+    display: flex;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    width: 35%;
+    height: 38px;
+    margin: 13px 51px 14px 8px;
+    /* padding: 10px 62px 9px 65px; */
+    border-radius: 42px;
+    border: solid 1px #707070;
+    background-color: rgba(214, 84, 114, 0.25);
+    float: left;
+    display: flex;
+    cursor: pointer;
+}
+
+.btn-text {
+    width: 60px;
+    height: 19px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #14171a;
+    margin: 5px 45px 10px 45px;
+    vertical-align: middle;
+}

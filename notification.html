@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <script src='scripts/sidebar.js'></script>
+    <script src='scripts/notification.js'></script>
+</head>
+
+<body style="width:428px; margin: 0 auto;">
+    <div id="left-sidebar" class="left_sidebar">
+        <img class="close_btn" src="assets/cancel.png" onclick="close_sidebar()">
+
+        <div style="margin: 200px 0 0 0;">
+            <div id="home" class="sidebar_menu" onclick="location.href='index.html'">
+                <img class="sidebar_icon" src="assets/home.png">
+                <span class="sidebar_icon_text">HOME</span>
+            </div>
+            <div class="sidebar_divider"></div>
+            <div id="set-location" class="sidebar_menu" onclick="location.href='location.html'">
+                <img class="sidebar_icon" src="assets/location.png">
+                <span class="sidebar_icon_text">위치 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='notification.html'">
+                <img class="sidebar_icon" src="assets/notification.png">
+                <span class="sidebar_icon_text">알림 설정</span>
+            </div>
+            <div class="sidebar_divider"></div>
+
+            <div id="set-alarm" class="sidebar_menu" onclick="location.href='#'">
+                <img class="sidebar_icon" src="assets/conversation.png">
+                <span class="sidebar_icon_text">문의하기</span>
+            </div>
+            <div class="sidebar_divider"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-div">
+            <div id="hamburger" class='hamburger' onclick="toggle()">
+                <img class='img-icon' src='assets/hamburger.png'>
+            </div>
+
+            <span class='section-header-text'>알림 내용 설정</span>
+
+            <div id="section1">
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk1" checked>
+                    <label for="chk1"></label>
+                    <img class="image-section1" src='assets/umbrella.png'>
+                    <span class="img-text-section1">우산 챙김 알림 받기</span>
+                </div>
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk2" checked>
+                    <label for="chk2"></label>
+                    <img class="image-section1" src='assets/sunscreen.png'>
+                    <span class="img-text-section1">선크림 알림 받기</span>
+                </div>
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk3" checked>
+                    <label for="chk3"></label>
+                    <img class="image-section1" src='assets/medical-mask.png' checked>
+                    <span class="img-text-section1">미세먼지 마스크 알림 받기</span>
+                </div>
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk4" checked>
+                    <label for="chk4"></label>
+                    <img class="image-section1" src='assets/jacket.png'>
+                    <span class="img-text-section1">외투 챙김 알림 받기</span>
+                </div>
+            </div>
+
+            <div class='section-divider'></div>
+            <span class='section-header-text'>알림 타입 설정</span>
+
+            <div id="section2">
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk5" checked>
+                    <label for="chk5"></label>
+                    <img class="image-section2" src='assets/banner.png'>
+                    <span class="img-text-section2">배너 알림 받기</span>
+                </div>
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk6" checked>
+                    <label for="chk6"></label>
+                    <img class="image-section2" src='assets/voice-control.png'>
+                    <span class="img-text-section2">음성 알림 받기</span>
+                </div>
+                <div class="container">
+                    <input type="checkbox" class="checker" id="chk7" checked>
+                    <label for="chk7"></label>
+                    <img class="image-section2" src='assets/chat.png' checked>
+                    <span class="img-text-section2">메신저 알림 받기</span>
+                </div>
+            </div>
+
+            <div class='section-divider'></div>
+            <span class='section-header-text'>알림 시간 설정</span>
+
+            <div id="section3">
+                <div class="container">
+                    <input type="number" id="time1" class="section3-time" value="0" min="1" max="2">
+                    <input type="number" id="time2" class="section3-time" value="8" min="0" max="9">
+                    <div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <input type="number" id="time3" class="section3-time" value="0" min="0" max="5">
+                    <input type="number" id="time4" class="section3-time" value="0">
+                </div>
+            </div>
+
+            <div style="width:100%;  height:40px">
+                <div class="save-btn" onclick="set_alarm();">
+                    <span class="btn-text">저장하기</span>
+                </div>
+                <div class="cancel-btn" onclick="location.href='location.html'">
+                    <span class="btn-text">취소하기</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
