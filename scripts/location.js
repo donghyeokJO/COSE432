@@ -17,6 +17,13 @@ function gotomain() {
 }
 
 function loadmap() {
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
     // if (navigator.geolocation) {
 
     //     // GeoLocation을 이용해서 접속 위치를 얻어옵니다
