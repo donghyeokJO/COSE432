@@ -17,13 +17,6 @@ function gotomain() {
 }
 
 function loadmap() {
-    var container = document.getElementById("map");
-    mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 10 // 지도의 확대 레벨 
-    };
-
-    var map = new kakao.maps.Map(container, mapOption);
     // if (navigator.geolocation) {
 
     //     // GeoLocation을 이용해서 접속 위치를 얻어옵니다

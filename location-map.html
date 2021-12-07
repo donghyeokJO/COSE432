@@ -9,7 +9,13 @@
     <script src='scripts/location.js'></script>
     <script type="text/javascript" src='//dapi.kakao.com/v2/maps/sdk.js?appkey=9ec8beb8634c11ce3ad7586eea3298b5'></script>
     <script>
-        window.onload = loadmap();
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
     </script>
 </head>
 
