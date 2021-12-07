@@ -65,6 +65,8 @@
                 <input id="location-text" type="text" class="location-self-current-location" readonly>
             </div>
 
+            <span class="inform-text">지도를 클릭해주세요!</span>
+
             <div class="map" id="map"></div>
             <script>
                 var container = document.getElementById('map');
@@ -98,16 +100,6 @@
                         position: locPosition
                     });
 
-                    var iwContent = message,
-                        iwRemoveable = true;
-
-                    var infowindow = new kakao.maps.InfoWindow({
-                        content: iwContent,
-                        removable: iwRemoveable
-                    });
-
-                    infowindow.open(map, marker);
-
                     map.setCenter(locPosition);
 
                     kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
@@ -118,25 +110,31 @@
                         var lat = latlng.getLat();
                         var lng = latlng.getLng();
 
-                        var url = "//dapi.kakao.com/v2/local/geo/coord2address.json?x=" + lat + "&y=" + lng
+                        var url = "//dapi.kakao.com/v2/local/geo/coord2address.json?x=" + lng + "&y=" + lat
                         fetch(url, {
                             headers: {
-                                'Authorization': 'KakaoAk 511ac660abc453c18f4244bb334d5c42'
+                                Authorization: 'KakaoAK 511ac660abc453c18f4244bb334d5c42'
                             }
-                        }).then((response) =>
-                            console.log(response)
-                        );
+                        }).then(function(response) {
+                            return response.json()
+                        }).then(function(json) {
+                            // console.log(json);
+                            si = json.documents[0].address.region_1depth_name;
+                            if (si == "서울") {
+                                si += '시'
+                            }
+                            gungu = json.documents[0].address.region_2depth_name;
 
-                        var resultDiv = document.getElementById('clickLatlng');
-                        resultDiv.innerHTML = message;
+                            var resultDiv = document.getElementById('location-text');
+                            resultDiv.value = si + ' ' + gungu;
+                        });
+
 
                     });
                 }
             </script>
-            <p><em>지도를 클릭해주세요!</em></p>
-            <div id="clickLatlng"></div>
             <div style="width:100%;  height:40px">
-                <div class="save-btn">
+                <div class="save-btn" onclick="gotomain()">
                     <span class="btn-text">저장하기</span>
                 </div>
                 <div class="cancel-btn" onclick="location.href='location.html'">
