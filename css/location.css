@@ -145,6 +145,7 @@
     background-color: rgba(29, 161, 242, 0.21);
     float: left;
     display: flex;
+    cursor: pointer;
 }
 
 .cancel-btn {
@@ -157,6 +158,7 @@
     background-color: rgba(214, 84, 114, 0.25);
     float: left;
     display: flex;
+    cursor: pointer;
 }
 
 .btn-text {
