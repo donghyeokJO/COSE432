@@ -206,3 +206,10 @@
     text-align: left;
     color: #14171a;
 } */
+
+.map {
+    width: 356px;
+    height: 351px;
+    margin: 29px 36px 0 36px;
+    border: solid 1px #707070;
+}
