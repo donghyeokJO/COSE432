@@ -67,14 +67,79 @@
 
             <div class="map" id="map"></div>
             <script>
-                loadmap();
-            </script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(37.58522551775887, 127.02844612912556),
+                    level: 3
+                };
+                var map = new kakao.maps.Map(container, options);
 
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+
+                        var lat = position.coords.latitude,
+                            lon = position.coords.longitude;
+
+                        var locPosition = new kakao.maps.LatLng(lat, lon),
+                            message = '<div style="padding:5px;">현재 위치입니다.</div>';
+
+                        displayMarker(locPosition, message);
+                    });
+                } else {
+                    var locPosition = new kakao.maps.LatLng(37.58522551775887, 127.02844612912556),
+                        message = 'geolocation을 사용할수 없어요..'
+
+                    displayMarker(locPosition, message);
+                }
+
+                function displayMarker(locPosition, message) {
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: locPosition
+                    });
+
+                    var iwContent = message,
+                        iwRemoveable = true;
+
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: iwContent,
+                        removable: iwRemoveable
+                    });
+
+                    infowindow.open(map, marker);
+
+                    map.setCenter(locPosition);
+
+                    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+                        var latlng = mouseEvent.latLng;
+
+                        marker.setPosition(latlng);
+
+                        var lat = latlng.getLat();
+                        var lng = latlng.getLng();
+
+                        var url = "//dapi.kakao.com/v2/local/geo/coord2address.json?x=" + lat + "&y=" + lng
+                        fetch(url, {
+                            headers: {
+                                'Authorization': 'KakaoAk 511ac660abc453c18f4244bb334d5c42'
+                            }
+                        }).then((response) =>
+                            console.log(response)
+                        );
+
+                        var resultDiv = document.getElementById('clickLatlng');
+                        resultDiv.innerHTML = message;
+
+                    });
+                }
+            </script>
+            <p><em>지도를 클릭해주세요!</em></p>
+            <div id="clickLatlng"></div>
             <div style="width:100%;  height:40px">
                 <div class="save-btn">
                     <span class="btn-text">저장하기</span>
                 </div>
-                <div class="cancel-btn">
+                <div class="cancel-btn" onclick="location.href='location.html'">
                     <span class="btn-text">취소하기</span>
                 </div>
             </div>
